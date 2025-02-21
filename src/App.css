@@ -1,0 +1,90 @@
+#root {
+   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.board {
+   border: 1px dashed gray;
+   height: 500px;
+   display: flex;
+   gap: 32px;
+   padding: 48px;
+   border-radius: 8px;
+}
+
+.column {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 20px;
+   min-width: 175px;
+   min-height: 200px;
+   background-color: rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+}
+
+.column p {
+   margin: 0;
+}
+
+.item {
+   appearance: none;
+   background: #FFF;
+   color: #666;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: grab;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   transform: scale(1);
+   box-shadow: inset 0px 0px 1px rgba(0,0,0,0.4), 0 0 0 calc(1px / var(--scale-x, 1)) rgba(63, 63, 68, 0.05), 0px 1px calc(2px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.05); 
+}
+
+.item[data-dragging="true"] {
+   transform: scale(1.02);
+   box-shadow: inset 0px 0px 1px rgba(0,0,0,0.5), -1px 0 15px 0 rgba(34, 33, 81, 0.01), 0px 15px 15px 0 rgba(34, 33, 81, 0.25)
+ }
+ 
+ .item:focus {
+   outline:none;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
